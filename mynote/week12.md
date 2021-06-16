@@ -16,11 +16,11 @@ int main() {
 >getpid就是得到該行程的識別碼
 * result
 ```
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ gcc fork1.c -o fork1
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ ./fork1
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ gcc fork1.c -o fork1
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ ./fork1
 4120  : Hello world!
 4122  : Hello world!
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ 4121  : Hello world!
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ 4121  : Hello world!
 4123  : Hello world!
 ```
 >fork() 的過程: 
@@ -42,13 +42,13 @@ int main() {
 ```
 * result 
 ```
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ gcc fork2.c -o fork2
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ ./fork2
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ gcc fork2.c -o fork2
+yzxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ ./fork2
 4261  : enter
 4261  : after 1st fork
 4261  : Hello world!
 4263  : Hello world!
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ 4262  : after 1st fork
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ 4262  : after 1st fork
 4262  : Hello world!
 4264  : Hello world!
 ```
@@ -73,10 +73,10 @@ int main() {
 ```
 * result
 ```
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ gcc fork3.c -o fork3
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ ./fork3&
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ gcc fork3.c -o fork3
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ ./fork3&
 [1] 4395
-yucheng@ubuntu:~/sp/08-posix/03-fork/01-hello$ 4395  : enter
+zxc21949049@ubuntu:~/sp/08-posix/03-fork/01-hello$ 4395  : enter
 4395  : after 1st fork
 4395  : Hello world!
 4397  : Hello world!
@@ -103,11 +103,11 @@ int main() {
 ```
 * result 
 ```
-yucheng@ubuntu:~/sp/08-posix/03-fork/02-child$ gcc fork2.c -o fork2
-yucheng@ubuntu:~/sp/08-posix/03-fork/02-child$ ./fork2
+zxc2194049@ubuntu:~/sp/08-posix/03-fork/02-child$ gcc fork2.c -o fork2
+zxc2194049@ubuntu:~/sp/08-posix/03-fork/02-child$ ./fork2
 4553 : I am parent!
 4555 : I am child!
-yucheng@ubuntu:~/sp/08-posix/03-fork/02-child$ 4554 : I am parent!
+zxc2194049@ubuntu:~/sp/08-posix/03-fork/02-child$ 4554 : I am parent!
 4556 : I am child!
 ```
 >fork()=0則為parent，其他值則為child，利用此方法分辨子母行程
@@ -126,11 +126,11 @@ int main() {
 ```
 * result
 ```
-yucheng@ubuntu:~/sp/08-posix/03-fork/03-exec$ gcc execvp1.c -o execvp1
-yucheng@ubuntu:~/sp/08-posix/03-fork/03-exec$ ./execvp1
+zxc2194049@ubuntu:~/sp/08-posix/03-fork/03-exec$ gcc execvp1.c -o execvp1
+zxc2194049@ubuntu:~/sp/08-posix/03-fork/03-exec$ ./execvp1
 execvp():before
 total 28
-drwxrwxr-x 2 yucheng yucheng  4096  3月 26 20:40 backup
--rwxrwxr-x 1 yucheng yucheng 16792  6月 11 19:31 execvp1
--rw-rw-r-- 1 yucheng yucheng   176  3月 26 20:40 execvp1.c
+drwxrwxr-x 2 zxc2194049 zxc2194049  4096  3月 26 20:40 backup
+-rwxrwxr-x 1 zxc2194049 zxc2194049 16792  6月 11 19:31 execvp1
+-rw-rw-r-- 1 zxc2194049 zxc2194049   176  3月 26 20:40 execvp1.c
 ```
